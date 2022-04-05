@@ -5,6 +5,8 @@ import vue from "@vitejs/plugin-vue";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  root: "/sudokusolver",
+  base: "",
   plugins: [vue()],
   resolve: {
     alias: {
