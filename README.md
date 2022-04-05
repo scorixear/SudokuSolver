@@ -1,6 +1,6 @@
 # SudokuSolver
 
-This template should help get you started developing with Vue 3 in Vite.
+This VueJS Page solves Sudokus.
 
 ## Recommended IDE Setup
 
