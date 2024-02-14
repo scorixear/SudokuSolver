@@ -43,9 +43,11 @@ export class SudokuSolver {
     for (let row = 0; row < 9; row++) {
       for (let column = 0; column < 9; column++) {
         if (grid[row][column] === 0) {
-          for (let numberToTry = 1; numberToTry <= 9; numberToTry++) {
-            if (this.isValidPlacement(grid, numberToTry, row, column)) {
-              grid[row][column] = numberToTry;
+          let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+          numbers = numbers.sort(() => Math.random() - 0.5);
+          for (const number of numbers) {
+            if (this.isValidPlacement(grid, number, row, column)) {
+              grid[row][column] = number;
               if (this.solveBoard(grid)) {
                 return true;
               }
